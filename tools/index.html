@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>Tools &#8211; bughunter</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//stats.wp.com">
+<link rel="alternate" type="application/rss+xml" title="bughunter &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="bughunter &raquo; Comments Feed" href="/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.4.1" media="all">
+<style id="wp-block-library-inline-css">.has-text-align-justify{text-align:justify;}</style>
+<link rel="stylesheet" id="mediaelement-css" href="/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.4.1" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="hello-elementor-css" href="/wp-content/themes/hello-elementor/style.min.css?ver=2.8.1" media="all">
+<link rel="stylesheet" id="hello-elementor-theme-style-css" href="/wp-content/themes/hello-elementor/theme.min.css?ver=2.8.1" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.16.4" media="all">
+<link rel="stylesheet" id="elementor-post-1391-css" href="/wp-content/uploads/elementor/css/post-1391.css?ver=1696407354" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.23.0" media="all">
+<link rel="stylesheet" id="swiper-css" href="/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.12.1" media="all">
+<link rel="stylesheet" id="uael-frontend-css" href="/wp-content/plugins/ultimate-elementor/assets/min-css/uael-frontend.min.css?ver=1.36.16" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="/wp-content/uploads/elementor/css/global.css?ver=1696407354" media="all">
+<link rel="stylesheet" id="elementor-post-1431-css" href="/wp-content/uploads/elementor/css/post-1431.css?ver=1696407355" media="all">
+<link rel="stylesheet" id="elementor-post-1815-css" href="/wp-content/uploads/elementor/css/post-1815.css?ver=1696407359" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Sarala%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter+Tight%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.4.1" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="/wp-content/plugins/jetpack/css/jetpack.css?ver=12.6.2" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<script src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/pages/1482">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.4.1">
+<link rel="canonical" href="/tools/">
+<link rel="shortlink" href="/?p=1482">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Ftools%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Ftools%2F&#038;format=xml">
+	<style>img#wpstats{display:none}</style>
+		<meta name="generator" content="Elementor 3.16.4; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<link rel="icon" href="/wp-content/uploads/2023/08/cropped-526-32x32.png" sizes="32x32">
+<link rel="icon" href="/wp-content/uploads/2023/08/cropped-526-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wp-content/uploads/2023/08/cropped-526-180x180.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2023/08/cropped-526-270x270.png">
+</head>
+<body class="page-template-default page page-id-1482 wp-custom-logo elementor-default elementor-kit-1391 elementor-page-1815">
+
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<div data-elementor-type="single-page" data-elementor-id="1815" class="elementor elementor-1815 elementor-location-single post-1482 page type-page status-publish hentry">
+								<section class="elementor-section elementor-top-section elementor-element elementor-element-c8c4502 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c8c4502" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-df4e401" data-id="df4e401" data-element_type="column">
+			<div class="elementor-widget-wrap">
+									</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-aff64c0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="aff64c0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b447bfd" data-id="b447bfd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<section class="elementor-section elementor-inner-section elementor-element elementor-element-0bc644e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0bc644e" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dd30957" data-id="dd30957" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1b30999 elementor-widget elementor-widget-heading" data-id="1b30999" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.16.0 - 20-09-2023 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style>
+<h3 class="elementor-heading-title elementor-size-default">Topics</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d156eec elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="d156eec" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css">			<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-d156eec" class="elementor-nav-menu sm-vertical">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817"><a href="/burp-intro/" class="elementor-item">burp-intro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><a href="/burp-install/" class="elementor-item">Burp-Install</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="/burpsuite/" class="elementor-item">Burp Suite</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="/burp-proxy/" class="elementor-item">Burp-Proxy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Burp-Spider</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823"><a href="/burp-and-fuff/" class="elementor-item">Burp and fuff</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1825"><a href="/project/" class="elementor-item">Project &#8220;Mission&#8221; Management</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1818"><a href="/bughunter-tools/" class="elementor-item">Bughunter-tools</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-d156eec" class="elementor-nav-menu sm-vertical">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817"><a href="/burp-intro/" class="elementor-item" tabindex="-1">burp-intro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><a href="/burp-install/" class="elementor-item" tabindex="-1">Burp-Install</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="/burpsuite/" class="elementor-item" tabindex="-1">Burp Suite</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="/burp-proxy/" class="elementor-item" tabindex="-1">Burp-Proxy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item" tabindex="-1">Burp-Spider</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823"><a href="/burp-and-fuff/" class="elementor-item" tabindex="-1">Burp and fuff</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1825"><a href="/project/" class="elementor-item" tabindex="-1">Project &#8220;Mission&#8221; Management</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1818"><a href="/bughunter-tools/" class="elementor-item" tabindex="-1">Bughunter-tools</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-004857d" data-id="004857d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7cbe26e elementor-widget__width-initial elementor-widget elementor-widget-theme-post-content" data-id="7cbe26e" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+			
+<p>A Non inclusive list of Tools that can be used for Bug Bounty efforts as well as Penetration Testing.</p>
+
+
+
+<p>Always refer to the original Bug Bounty Tools list here: &#8211; <a href="https://github.com/Mlodzianowski/bughunter">https://github.com/Mlodzianowski/bughunter</a></p>
+
+
+
+<p>C99 Tools &#8211; API Service &#8211; <a href="https://api.c99.nl/" target="_blank" rel="noreferrer noopener">https://api.c99.nl/</a></p>
+
+
+
+<h1 class="wp-block-heading"><strong>Recon</strong></h1>
+
+
+
+<p><em>Reconnaissance Tools</em></p>
+
+
+
+<h3 class="wp-block-heading">
+<a href="https://github.com/vavkamil/awesome-bugbounty-tools#subdomain-enumeration"></a><strong>Domain and Subdomain Enumeration</strong>
+</h3>
+
+
+
+<ul>
+<li>
+<a href="http://urlvoid.com/" target="_blank" rel="noreferrer noopener">urlvoid.com</a> &#8211; Test a url for hazards even before you start</li>
+
+
+
+<li>
+<a href="https://github.com/aboul3la/Sublist3r">Sublist3r</a> &#8211; Fast subdomains enumeration tool for penetration testers</li>
+
+
+
+<li>
+<a href="https://github.com/OWASP/Amass">Amass</a> &#8211; In-depth Attack Surface Mapping and Asset Discovery</li>
+
+
+
+<li>
+<a href="https://github.com/blechschmidt/massdns">massdns</a> &#8211; A high-performance DNS stub resolver for bulk lookups and reconnaissance (subdomain enumeration)</li>
+
+
+
+<li>
+<a href="https://github.com/Findomain/Findomain">Findomain</a> &#8211; The fastest and cross-platform subdomain enumerator, do not waste your time.</li>
+
+
+
+<li>
+<a href="https://github.com/Screetsec/Sudomy">Sudomy</a> &#8211; Sudomy is a subdomain enumeration tool to collect subdomains and analyzing domains performing automated reconnaissance (recon) for bug hunting / pentesting</li>
+
+
+
+<li>
+<a href="https://github.com/projectdiscovery/chaos-client">chaos-client</a> &#8211; Go client to communicate with Chaos DNS API.</li>
+
+
+
+<li>
+<a href="https://github.com/TypeError/domained">domained</a> &#8211; Multi Tool Subdomain Enumeration</li>
+
+
+
+<li>
+<a href="https://github.com/appsecco/bugcrowd-levelup-subdomain-enumeration">bugcrowd-levelup-subdomain-enumeration</a> &#8211; This repository contains all the material from the talk &#8220;Esoteric sub-domain enumeration techniques&#8221; given at Bugcrowd LevelUp 2017 virtual conference</li>
+
+
+
+<li>
+<a href="https://github.com/projectdiscovery/shuffledns">shuffledns</a> &#8211; shuffleDNS is a wrapper around massdns written in go that allows you to enumerate valid subdomains using active bruteforce as well as resolve subdomains with wildcard handling and easy input-output…</li>
+
+
+
+<li>
+<a href="https://github.com/christophetd/censys-subdomain-finder">censys-subdomain-finder</a> &#8211; Perform subdomain enumeration using the certificate transparency logs from Censys.</li>
+
+
+
+<li>
+<a href="https://github.com/fleetcaptain/Turbolist3r">Turbolist3r</a> &#8211; Subdomain enumeration tool with analysis features for discovered domains</li>
+
+
+
+<li>
+<a href="https://github.com/0xbharath/censys-enumeration">censys-enumeration</a> &#8211; A script to extract subdomains/emails for a given domain using SSL/TLS certificate dataset on Censys</li>
+
+
+
+<li>
+<a href="https://github.com/LordNeoStark/tugarecon">tugarecon</a> &#8211; Fast subdomains enumeration tool for penetration testers.</li>
+
+
+
+<li>
+<a href="https://github.com/cinerieus/as3nt">as3nt</a> &#8211; Another Subdomain ENumeration Tool</li>
+
+
+
+<li>
+<a href="https://github.com/si9int/Subra">Subra</a> &#8211; A Web-UI for subdomain enumeration (subfinder)</li>
+
+
+
+<li>
+<a href="https://github.com/nexxai/Substr3am">Substr3am</a> &#8211; Passive reconnaissance/enumeration of interesting targets by watching for SSL certificates being issued</li>
+
+
+
+<li>
+<a href="https://github.com/jhaddix/domain/">domain</a> &#8211; enumall.py Setup script for Regon-ng</li>
+
+
+
+<li>
+<a href="https://github.com/infosec-au/altdns">altdns</a> &#8211; Generates permutations, alterations and mutations of subdomains and then resolves them</li>
+
+
+
+<li>
+<a href="https://github.com/anshumanbh/brutesubs">brutesubs</a> &#8211; An automation framework for running multiple open sourced subdomain bruteforcing tools (in parallel) using your own wordlists via Docker Compose</li>
+
+
+
+<li>
+<a href="https://github.com/lorenzog/dns-parallel-prober">dns-parallel-prober</a> &#8211; his is a parallelised domain name prober to find as many subdomains of a given domain as fast as possible.</li>
+
+
+
+<li>
+<a href="https://github.com/rbsec/dnscan">dnscan</a> &#8211; dnscan is a python wordlist-based DNS subdomain scanner.</li>
+
+
+
+<li>
+<a href="https://github.com/guelfoweb/knock">knock</a> &#8211; Knockpy is a python tool designed to enumerate subdomains on a target domain through a wordlist.</li>
+
+
+
+<li>
+<a href="https://github.com/hakluke/hakrevdns">hakrevdns</a> &#8211; Small, fast tool for performing reverse DNS lookups en masse.</li>
+
+
+
+<li>
+<a href="https://github.com/projectdiscovery/dnsx">dnsx</a> &#8211; Dnsx is a fast and multi-purpose DNS toolkit allow to run multiple DNS queries of your choice with a list of user-supplied resolvers.</li>
+
+
+
+<li>
+<a href="https://github.com/projectdiscovery/subfinder">subfinder</a> &#8211; Subfinder is a subdomain discovery tool that discovers valid subdomains for websites.</li>
+
+
+
+<li>
+<a href="https://github.com/tomnomnom/assetfinder">assetfinder</a> &#8211; Find domains and subdomains related to a given domain</li>
+
+
+
+<li>
+<a href="https://github.com/nahamsec/crtndstry">crtndstry</a> &#8211; Yet another subdomain finder</li>
+
+
+
+<li>
+<a href="https://github.com/codingo/VHostScan">VHostScan</a> &#8211; A virtual host scanner that performs reverse lookups</li>
+
+
+
+<li>
+<a href="https://github.com/edoardottt/scilla">scilla</a> &#8211; Information Gathering tool &#8211; DNS / Subdomains / Ports / Directories enumeration</li>
+
+
+
+<li>
+<a href="https://github.com/3nock/sub3suite">sub3suite</a> &#8211; A research-grade suite of tools for subdomain enumeration, intelligence gathering and attack surface mapping.</li>
+
+
+
+<li>
+<a href="https://github.com/glebarez/cero">cero</a> &#8211; Scrape domain names from SSL certificates of arbitrary hosts</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#port-scanning"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Port Scanning</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/robertdavidgraham/masscan">masscan</a> &#8211; TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes.</li>
+
+
+
+<li>
+<a href="https://github.com/RustScan/RustScan">RustScan</a> &#8211; The Modern Port Scanner</li>
+
+
+
+<li>
+<a href="https://github.com/projectdiscovery/naabu">naabu</a> &#8211; A fast port scanner written in go with focus on reliability and simplicity.</li>
+
+
+
+<li>
+<a href="https://github.com/nmap/nmap">nmap</a> &#8211; Nmap &#8211; the Network Mapper. Github mirror of official SVN repository.</li>
+
+
+
+<li>
+<a href="https://github.com/trimstray/sandmap">sandmap</a> &#8211; Nmap on steroids. Simple CLI with the ability to run pure Nmap engine, 31 modules with 459 scan profiles.</li>
+
+
+
+<li>
+<a href="https://github.com/johnnyxmas/ScanCannon">ScanCannon</a> &#8211; Combines the speed of masscan with the reliability and detailed enumeration of nmap</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#screenshots"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Screenshots</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/FortyNorthSecurity/EyeWitness">EyeWitness</a> &#8211; EyeWitness is designed to take screenshots of websites, provide some server header info, and identify default credentials if possible.</li>
+
+
+
+<li>
+<a href="https://github.com/michenriksen/aquatone">aquatone</a> &#8211; Aquatone is a tool for visual inspection of websites across a large amount of hosts and is convenient for quickly gaining an overview of HTTP-based attack surface.</li>
+
+
+
+<li>
+<a href="https://github.com/vladocar/screenshoteer">screenshoteer</a> &#8211; Make website screenshots and mobile emulations from the command line.</li>
+
+
+
+<li>
+<a href="https://github.com/sensepost/gowitness">gowitness</a> &#8211; gowitness &#8211; a golang, web screenshot utility using Chrome Headless</li>
+
+
+
+<li>
+<a href="https://github.com/byt3bl33d3r/WitnessMe">WitnessMe</a> &#8211; Web Inventory tool, takes screenshots of webpages using Pyppeteer (headless Chrome/Chromium) and provides some extra bells &amp; whistles to make life easier.</li>
+
+
+
+<li>
+<a href="https://github.com/BishopFox/eyeballer">eyeballer</a> &#8211; Convolutional neural network for analyzing pentest screenshots</li>
+
+
+
+<li>
+<a href="https://github.com/nccgroup/scrying">scrying</a> &#8211; A tool for collecting RDP, web and VNC screenshots all in one place</li>
+
+
+
+<li>
+<a href="https://github.com/beurtschipper/Depix">Depix</a> &#8211; Recovers passwords from pixelized screenshots</li>
+
+
+
+<li>
+<a href="https://github.com/breenmachine/httpscreenshot/">httpscreenshot</a> &#8211; HTTPScreenshot is a tool for grabbing screenshots and HTML of large numbers of websites.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#technologies"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Technologies</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/AliasIO/wappalyzer">wappalyzer</a> &#8211; Identify technology on websites.</li>
+
+
+
+<li>
+<a href="https://github.com/rverton/webanalyze">webanalyze</a> &#8211; Port of Wappalyzer (uncovers technologies used on websites) to automate mass scanning.</li>
+
+
+
+<li>
+<a href="https://github.com/claymation/python-builtwith">python-builtwith</a> &#8211; BuiltWith API client</li>
+
+
+
+<li>
+<a href="https://github.com/urbanadventurer/whatweb">whatweb</a> &#8211; Next generation web scanner</li>
+
+
+
+<li>
+<a href="https://github.com/RetireJS/retire.js">retire.js</a> &#8211; scanner detecting the use of JavaScript libraries with known vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/projectdiscovery/httpx">httpx</a> &#8211; httpx is a fast and multi-purpose HTTP toolkit allows to run multiple probers using retryablehttp library, it is designed to maintain the result reliability with increased threads.</li>
+
+
+
+<li>
+<a href="https://github.com/praetorian-inc/fingerprintx">fingerprintx</a> &#8211; fingerprintx is a standalone utility for service discovery on open ports that works well with other popular bug bounty command line tools.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#content-discovery"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Content Discovery</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/OJ/gobuster">gobuster</a> &#8211; Directory/File, DNS and VHost busting tool written in Go</li>
+
+
+
+<li>
+<a href="https://github.com/C-Sto/recursebuster">recursebuster</a> &#8211; rapid content discovery tool for recursively querying webservers, handy in pentesting and web application assessments</li>
+
+
+
+<li>
+<a href="https://github.com/epi052/feroxbuster">feroxbuster</a> &#8211; A fast, simple, recursive content discovery tool written in Rust.</li>
+
+
+
+<li>
+<a href="https://github.com/maurosoria/dirsearch">dirsearch</a> &#8211; Web path scanner</li>
+
+
+
+<li>
+<a href="https://github.com/evilsocket/dirsearch">dirsearch</a> &#8211; A Go implementation of dirsearch.</li>
+
+
+
+<li>
+<a href="https://github.com/henshin/filebuster">filebuster</a> &#8211; An extremely fast and flexible web fuzzer</li>
+
+
+
+<li>
+<a href="https://github.com/stefanoj3/dirstalk">dirstalk</a> &#8211; Modern alternative to dirbuster/dirb</li>
+
+
+
+<li>
+<a href="https://github.com/digination/dirbuster-ng">dirbuster-ng</a> &#8211; dirbuster-ng is C CLI implementation of the Java dirbuster tool</li>
+
+
+
+<li>
+<a href="https://github.com/jaeles-project/gospider">gospider</a> &#8211; Gospider &#8211; Fast web spider written in Go</li>
+
+
+
+<li>
+<a href="https://github.com/hakluke/hakrawler">hakrawler</a> &#8211; Simple, fast web crawler designed for easy, quick discovery of endpoints and assets within a web application</li>
+
+
+
+<li>
+<a href="https://github.com/s0rg/crawley">crawley</a> &#8211; fast, feature-rich unix-way web scraper/crawler written in Golang.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#links"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Links</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/GerbenJavado/LinkFinder">LinkFinder</a> &#8211; A python script that finds endpoints in JavaScript files</li>
+
+
+
+<li>
+<a href="https://github.com/zseano/JS-Scan">JS-Scan</a> &#8211; a .js scanner, built in php. designed to scrape urls and other info</li>
+
+
+
+<li>
+<a href="https://github.com/arbazkiraak/LinksDumper">LinksDumper</a> &#8211; Extract (links/possible endpoints) from responses &amp; filter them via decoding/sorting</li>
+
+
+
+<li>
+<a href="https://github.com/0xsha/GoLinkFinder">GoLinkFinder</a> &#8211; A fast and minimal JS endpoint extractor</li>
+
+
+
+<li>
+<a href="https://github.com/InitRoot/BurpJSLinkFinder">BurpJSLinkFinder</a> &#8211; Burp Extension for a passive scanning JS files for endpoint links.</li>
+
+
+
+<li>
+<a href="https://github.com/IAmStoxe/urlgrab">urlgrab</a> &#8211; A golang utility to spider through a website searching for additional links.</li>
+
+
+
+<li>
+<a href="https://github.com/tomnomnom/waybackurls">waybackurls</a> &#8211; Fetch all the URLs that the Wayback Machine knows about for a domain</li>
+
+
+
+<li>
+<a href="https://github.com/lc/gau">gau</a> &#8211; Fetch known URLs from AlienVault&#8217;s Open Threat Exchange, the Wayback Machine, and Common Crawl.</li>
+
+
+
+<li>
+<a href="https://github.com/003random/getJS">getJS</a> &#8211; A tool to fastly get all javascript sources/files</li>
+
+
+
+<li>
+<a href="https://github.com/riza/linx">linx</a> &#8211; Reveals invisible links within JavaScript files</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#parameters"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Parameters</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/maK-/parameth">parameth</a> &#8211; This tool can be used to brute discover GET and POST parameters</li>
+
+
+
+<li>
+<a href="https://github.com/PortSwigger/param-miner">param-miner</a> &#8211; This extension identifies hidden, unlinked parameters. It&#8217;s particularly useful for finding web cache poisoning vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/Bo0oM/ParamPamPam">ParamPamPam</a> &#8211; This tool for brute discover GET and POST parameters.</li>
+
+
+
+<li>
+<a href="https://github.com/s0md3v/Arjun">Arjun</a> &#8211; HTTP parameter discovery suite.</li>
+
+
+
+<li>
+<a href="https://github.com/devanshbatham/ParamSpider">ParamSpider</a> &#8211; Mining parameters from dark corners of Web Archives.</li>
+
+
+
+<li>
+<a href="https://github.com/Sh1Yo/x8">x8</a> &#8211; Hidden parameters discovery suite written in Rust.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#fuzzing"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Fuzzing</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/xmendez/wfuzz">wfuzz</a> &#8211; Web application fuzzer</li>
+
+
+
+<li>
+<a href="https://github.com/ffuf/ffuf">ffuf</a> &#8211; Fast web fuzzer written in Go</li>
+
+
+
+<li>
+<a href="https://github.com/fuzzdb-project/fuzzdb">fuzzdb</a> &#8211; Dictionary of attack patterns and primitives for black-box application fault injection and resource discovery.</li>
+
+
+
+<li>
+<a href="https://github.com/1N3/IntruderPayloads">IntruderPayloads</a> &#8211; A collection of Burpsuite Intruder payloads, BurpBounty payloads, fuzz lists, malicious file uploads and web pentesting methodologies and checklists.</li>
+
+
+
+<li>
+<a href="https://github.com/Bo0oM/fuzz.txt">fuzz.txt</a> &#8211; Potentially dangerous files</li>
+
+
+
+<li>
+<a href="https://github.com/googleprojectzero/fuzzilli">fuzzilli</a> &#8211; A JavaScript Engine Fuzzer</li>
+
+
+
+<li>
+<a href="https://github.com/Fuzzapi/fuzzapi">fuzzapi</a> &#8211; Fuzzapi is a tool used for REST API pentesting and uses API_Fuzzer gem</li>
+
+
+
+<li>
+<a href="https://github.com/ameenmaali/qsfuzz">qsfuzz</a> &#8211; qsfuzz (Query String Fuzz) allows you to build your own rules to fuzz query strings and easily identify vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/d4rckh/vaf">vaf</a> &#8211; very advanced (web) fuzzer written in Nim.</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h2 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#exploitation"></a></h2>
+
+
+
+<h2 class="wp-block-heading"><strong>Exploitation</strong></h2>
+
+
+
+<p><strong>Command Injection</strong></p>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/commixproject/commix">commix</a> &#8211; Automated All-in-One OS command injection and exploitation tool.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#cors-misconfiguration"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>CORS Misconfiguration</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/s0md3v/Corsy">Corsy</a> &#8211; CORS Misconfiguration Scanner</li>
+
+
+
+<li>
+<a href="https://github.com/RUB-NDS/CORStest">CORStest</a> &#8211; A simple CORS misconfiguration scanner</li>
+
+
+
+<li>
+<a href="https://github.com/laconicwolf/cors-scanner">cors-scanner</a> &#8211; A multi-threaded scanner that helps identify CORS flaws/misconfigurations</li>
+
+
+
+<li>
+<a href="https://github.com/Shivangx01b/CorsMe">CorsMe</a> &#8211; Cross Origin Resource Sharing MisConfiguration Scanner</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#crlf-injection"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>CRLF Injection</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/Nefcore/CRLFsuite">CRLFsuite</a> &#8211; A fast tool specially designed to scan CRLF injection</li>
+
+
+
+<li>
+<a href="https://github.com/dwisiswant0/crlfuzz">crlfuzz</a> &#8211; A fast tool to scan CRLF vulnerability written in Go</li>
+
+
+
+<li>
+<a href="https://github.com/MichaelStott/CRLF-Injection-Scanner">CRLF-Injection-Scanner</a> &#8211; Command line tool for testing CRLF injection on a list of domains.</li>
+
+
+
+<li>
+<a href="https://github.com/BountyStrike/Injectus">Injectus</a> &#8211; CRLF and open redirect fuzzer</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#csrf-injection"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>CSRF Injection</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/0xInfection/XSRFProbe">XSRFProbe</a> -The Prime Cross Site Request Forgery (CSRF) Audit and Exploitation Toolkit.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#directory-traversal"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Directory Traversal</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/wireghoul/dotdotpwn">dotdotpwn</a> &#8211; DotDotPwn &#8211; The Directory Traversal Fuzzer</li>
+
+
+
+<li>
+<a href="https://github.com/chrispetrou/FDsploit">FDsploit</a> &#8211; File Inclusion &amp; Directory Traversal fuzzing, enumeration &amp; exploitation tool.</li>
+
+
+
+<li>
+<a href="https://github.com/bayotop/off-by-slash">off-by-slash</a> &#8211; Burp extension to detect alias traversal via NGINX misconfiguration at scale.</li>
+
+
+
+<li>
+<a href="https://github.com/momenbasel/liffier">liffier</a> &#8211; tired of manually add dot-dot-slash to your possible path traversal? this short snippet will increment ../ on the URL.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#file-inclusion"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>File Inclusion</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/mzfr/liffy">liffy</a> &#8211; Local file inclusion exploitation tool</li>
+
+
+
+<li>
+<a href="https://github.com/Team-Firebugs/Burp-LFI-tests">Burp-LFI-tests</a> &#8211; Fuzzing for LFI using Burpsuite</li>
+
+
+
+<li>
+<a href="https://github.com/mthbernardes/LFI-Enum">LFI-Enum</a> &#8211; Scripts to execute enumeration via LFI</li>
+
+
+
+<li>
+<a href="https://github.com/D35m0nd142/LFISuite">LFISuite</a> &#8211; Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner</li>
+
+
+
+<li>
+<a href="https://github.com/hussein98d/LFI-files">LFI-files</a> &#8211; Wordlist to bruteforce for LFI</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#graphql-injection"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>GraphQL Injection</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/doyensec/inql">inql</a> &#8211; InQL &#8211; A Burp Extension for GraphQL Security Testing</li>
+
+
+
+<li>
+<a href="https://github.com/swisskyrepo/GraphQLmap">GraphQLmap</a> &#8211; GraphQLmap is a scripting engine to interact with a graphql endpoint for pentesting purposes.</li>
+
+
+
+<li>
+<a href="https://github.com/szski/shapeshifter">shapeshifter</a> &#8211; GraphQL security testing tool</li>
+
+
+
+<li>
+<a href="https://github.com/zidekmat/graphql_beautifier">graphql_beautifier</a> &#8211; Burp Suite extension to help make Graphql request more readable</li>
+
+
+
+<li>
+<a href="https://github.com/nikitastupin/clairvoyance">clairvoyance</a> &#8211; Obtain GraphQL API schema despite disabled introspection!</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#header-injection"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Header Injection</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/mlcsec/headi">headi</a> &#8211; Customisable and automated HTTP header injection.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#insecure-deserialization"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Insecure Deserialization</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/frohoff/ysoserial">ysoserial</a> &#8211; A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.</li>
+
+
+
+<li>
+<a href="https://github.com/BishopFox/GadgetProbe">GadgetProbe</a> &#8211; Probe endpoints consuming Java serialized objects to identify classes, libraries, and library versions on remote Java classpaths.</li>
+
+
+
+<li>
+<a href="https://github.com/pwntester/ysoserial.net">ysoserial.net</a> &#8211; Deserialization payload generator for a variety of .NET formatters</li>
+
+
+
+<li>
+<a href="https://github.com/ambionics/phpggc">phpggc</a> &#8211; PHPGGC is a library of PHP unserialize() payloads along with a tool to generate them, from command line or programmatically.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#insecure-direct-object-references"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Insecure Direct Object References</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/Quitten/Autorize">Autorize</a> &#8211; Automatic authorization enforcement detection extension for burp suite written in Jython developed by Barak Tawily</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#open-redirect"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Open Redirect</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/r0075h3ll/Oralyzer">Oralyzer</a> &#8211; Open Redirection Analyzer</li>
+
+
+
+<li>
+<a href="https://github.com/BountyStrike/Injectus">Injectus</a> &#8211; CRLF and open redirect fuzzer</li>
+
+
+
+<li>
+<a href="https://github.com/Naategh/dom-red">dom-red</a> &#8211; Small script to check a list of domains against open redirect vulnerability</li>
+
+
+
+<li>
+<a href="https://github.com/devanshbatham/OpenRedireX">OpenRedireX</a> &#8211; A Fuzzer for OpenRedirect issues</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Race Condition</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/compsec-snu/razzer">razzer</a> &#8211; A Kernel fuzzer focusing on race bugs</li>
+
+
+
+<li>
+<a href="https://github.com/racepwn/racepwn">racepwn</a> &#8211; Race Condition framework</li>
+
+
+
+<li>
+<a href="https://github.com/nccgroup/requests-racer">requests-racer</a> &#8211; Small Python library that makes it easy to exploit race conditions in web apps with Requests.</li>
+
+
+
+<li>
+<a href="https://github.com/PortSwigger/turbo-intruder">turbo-intruder</a> &#8211; Turbo Intruder is a Burp Suite extension for sending large numbers of HTTP requests and analyzing the results.</li>
+
+
+
+<li>
+<a href="https://github.com/TheHackerDev/race-the-web">race-the-web</a> &#8211; Tests for race conditions in web applications. Includes a RESTful API to integrate into a continuous integration pipeline.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#request-smuggling"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Request Smuggling</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/anshumanpattnaik/http-request-smuggling">http-request-smuggling</a> &#8211; HTTP Request Smuggling Detection Tool</li>
+
+
+
+<li>
+<a href="https://github.com/defparam/smuggler">smuggler</a> &#8211; Smuggler &#8211; An HTTP Request Smuggling / Desync testing tool written in Python 3</li>
+
+
+
+<li>
+<a href="https://github.com/BishopFox/h2csmuggler">h2csmuggler</a> &#8211; HTTP Request Smuggling over HTTP/2 Cleartext (h2c)</li>
+
+
+
+<li>
+<a href="https://github.com/defparam/tiscripts">tiscripts</a> &#8211; These scripts I use to create Request Smuggling Desync payloads for CLTE and TECL style attacks.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#server-side-request-forgery"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>Server Side Request Forgery</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/swisskyrepo/SSRFmap">SSRFmap</a> &#8211; Automatic SSRF fuzzer and exploitation tool</li>
+
+
+
+<li>
+<a href="https://github.com/tarunkant/Gopherus">Gopherus</a> &#8211; This tool generates gopher link for exploiting SSRF and gaining RCE in various servers</li>
+
+
+
+<li>
+<a href="https://github.com/jobertabma/ground-control">ground-control</a> &#8211; A collection of scripts that run on my web server. Mainly for debugging SSRF, blind XSS, and XXE vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/micha3lb3n/SSRFire">SSRFire</a> &#8211; An automated SSRF finder. Just give the domain name and your server and chill! 😉 Also has options to find XSS and open redirects</li>
+
+
+
+<li>
+<a href="https://github.com/daeken/httprebind">httprebind</a> &#8211; Automatic tool for DNS rebinding-based SSRF attacks</li>
+
+
+
+<li>
+<a href="https://github.com/teknogeek/ssrf-sheriff">ssrf-sheriff</a> &#8211; A simple SSRF-testing sheriff written in Go</li>
+
+
+
+<li>
+<a href="https://github.com/SpiderMate/B-XSSRF">B-XSSRF</a> &#8211; Toolkit to detect and keep track on Blind XSS, XXE &amp; SSRF</li>
+
+
+
+<li>
+<a href="https://github.com/Damian89/extended-ssrf-search">extended-ssrf-search</a> &#8211; Smart ssrf scanner using different methods like parameter brute forcing in post and get&#8230;</li>
+
+
+
+<li>
+<a href="https://github.com/KathanP19/gaussrf">gaussrf</a> &#8211; Fetch known URLs from AlienVault&#8217;s Open Threat Exchange, the Wayback Machine, and Common Crawl and Filter Urls With OpenRedirection or SSRF Parameters.</li>
+
+
+
+<li>
+<a href="https://github.com/JacobReynolds/ssrfDetector">ssrfDetector</a> &#8211; Server-side request forgery detector</li>
+
+
+
+<li>
+<a href="https://github.com/RandomRobbieBF/grafana-ssrf">grafana-ssrf</a> &#8211; Authenticated SSRF in Grafana</li>
+
+
+
+<li>
+<a href="https://github.com/xawdxawdx/sentrySSRF">sentrySSRF</a> &#8211; Tool to searching sentry config on page or in javascript files and check blind SSRF</li>
+
+
+
+<li>
+<a href="https://github.com/knassar702/lorsrf">lorsrf</a> &#8211; Bruteforcing on Hidden parameters to find SSRF vulnerability using GET and POST Methods</li>
+
+
+
+<li>
+<a href="https://github.com/nccgroup/singularity">singularity</a> &#8211; A DNS rebinding attack framework.</li>
+
+
+
+<li>
+<a href="https://github.com/brannondorsey/whonow">whonow</a> &#8211; A &#8220;malicious&#8221; DNS server for executing DNS Rebinding attacks on the fly (public instance running on rebind.network:53)</li>
+
+
+
+<li>
+<a href="https://github.com/brannondorsey/dns-rebind-toolkit">dns-rebind-toolkit</a> &#8211; A front-end JavaScript toolkit for creating DNS rebinding attacks.</li>
+
+
+
+<li>
+<a href="https://github.com/FSecureLABS/dref">dref</a> &#8211; DNS Rebinding Exploitation Framework</li>
+
+
+
+<li>
+<a href="https://github.com/taviso/rbndr">rbndr</a> &#8211; Simple DNS Rebinding Service</li>
+
+
+
+<li>
+<a href="https://github.com/daeken/httprebind">httprebind</a> &#8211; Automatic tool for DNS rebinding-based SSRF attacks</li>
+
+
+
+<li>
+<a href="https://github.com/makuga01/dnsFookup">dnsFookup</a> &#8211; DNS rebinding toolkit</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#sql-injection"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>SQL Injection</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/sqlmapproject/sqlmap">sqlmap</a> &#8211; Automatic SQL injection and database takeover tool</li>
+
+
+
+<li>
+<a href="https://github.com/codingo/NoSQLMap">NoSQLMap</a> &#8211; Automated NoSQL database enumeration and web application exploitation tool.</li>
+
+
+
+<li>
+<a href="https://github.com/0xbug/SQLiScanner">SQLiScanner</a> &#8211; Automatic SQL injection with Charles and sqlmap api</li>
+
+
+
+<li>
+<a href="https://github.com/RhinoSecurityLabs/SleuthQL">SleuthQL</a> &#8211; Python3 Burp History parsing tool to discover potential SQL injection points. To be used in tandem with SQLmap.</li>
+
+
+
+<li>
+<a href="https://github.com/blackarrowsec/mssqlproxy">mssqlproxy</a> &#8211; mssqlproxy is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse</li>
+
+
+
+<li>
+<a href="https://github.com/zt2/sqli-hunter">sqli-hunter</a> &#8211; SQLi-Hunter is a simple HTTP / HTTPS proxy server and a SQLMAP API wrapper that makes digging SQLi easy.</li>
+
+
+
+<li>
+<a href="https://github.com/ghostlulzhacks/waybackSqliScanner">waybackSqliScanner</a> &#8211; Gather urls from wayback machine then test each GET parameter for sql injection.</li>
+
+
+
+<li>
+<a href="https://github.com/NetSPI/ESC">ESC</a> &#8211; Evil SQL Client (ESC) is an interactive .NET SQL console client with enhanced SQL Server discovery, access, and data exfiltration features.</li>
+
+
+
+<li>
+<a href="https://github.com/Keramas/mssqli-duet">mssqli-duet</a> &#8211; SQL injection script for MSSQL that extracts domain users from an Active Directory environment based on RID bruteforcing</li>
+
+
+
+<li>
+<a href="https://github.com/Miladkhoshdel/burp-to-sqlmap">burp-to-sqlmap</a> &#8211; Performing SQLInjection test on Burp Suite Bulk Requests using SQLMap</li>
+
+
+
+<li>
+<a href="https://github.com/InitRoot/BurpSQLTruncSanner">BurpSQLTruncSanner</a> &#8211; Messy BurpSuite plugin for SQL Truncation vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/sadicann/andor">andor</a> &#8211; Blind SQL Injection Tool with Golang</li>
+
+
+
+<li>
+<a href="https://github.com/mhaskar/Blinder">Blinder</a> &#8211; A python library to automate time-based blind SQL injection</li>
+
+
+
+<li>
+<a href="https://github.com/the-robot/sqliv">sqliv</a> &#8211; massive SQL injection vulnerability scanner</li>
+
+
+
+<li>
+<a href="https://github.com/Charlie-belmer/nosqli">nosqli</a> &#8211; NoSql Injection CLI tool, for finding vulnerable websites using MongoDB.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#xss-injection"></a></h3>
+
+
+
+<h3 class="wp-block-heading"><strong>XSS Injection</strong></h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/s0md3v/XSStrike">XSStrike</a> &#8211; Most advanced XSS scanner.</li>
+
+
+
+<li>
+<a href="https://github.com/evilcos/xssor2">xssor2</a> &#8211; XSS&#8217;OR &#8211; Hack with JavaScript.</li>
+
+
+
+<li>
+<a href="https://github.com/DanMcInerney/xsscrapy">xsscrapy</a> &#8211; XSS spider &#8211; 66/66 wavsep XSS detected</li>
+
+
+
+<li>
+<a href="https://github.com/Netflix-Skunkworks/sleepy-puppy">sleepy-puppy</a> &#8211; Sleepy Puppy XSS Payload Management Framework</li>
+
+
+
+<li>
+<a href="https://github.com/ssl/ezXSS">ezXSS</a> &#8211; ezXSS is an easy way for penetration testers and bug bounty hunters to test (blind) Cross Site Scripting.</li>
+
+
+
+<li>
+<a href="https://github.com/mandatoryprogrammer/xsshunter">xsshunter</a> &#8211; The XSS Hunter service &#8211; a portable version of XSSHunter.com</li>
+
+
+
+<li>
+<a href="https://github.com/hahwul/dalfox">dalfox</a> &#8211; DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang</li>
+
+
+
+<li>
+<a href="https://github.com/epsylon/xsser">xsser</a> &#8211; Cross Site &#8220;Scripter&#8221; (aka XSSer) is an automatic -framework- to detect, exploit and report XSS vulnerabilities in web-based applications.</li>
+
+
+
+<li>
+<a href="https://github.com/hahwul/XSpear">XSpear</a> &#8211; Powerfull XSS Scanning and Parameter analysis tool&amp;gem</li>
+
+
+
+<li>
+<a href="https://github.com/hakluke/weaponised-XSS-payloads">weaponised-XSS-payloads</a> &#8211; XSS payloads designed to turn alert(1) into P1</li>
+
+
+
+<li>
+<a href="https://github.com/nccgroup/tracy">tracy</a> &#8211; A tool designed to assist with finding all sinks and sources of a web application and display these results in a digestible manner.</li>
+
+
+
+<li>
+<a href="https://github.com/jobertabma/ground-control">ground-control</a> &#8211; A collection of scripts that run on my web server. Mainly for debugging SSRF, blind XSS, and XXE vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/nVisium/xssValidator">xssValidator</a> &#8211; This is a burp intruder extender that is designed for automation and validation of XSS vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/Den1al/JSShell">JSShell</a> &#8211; An interactive multi-user web JS shell</li>
+
+
+
+<li>
+<a href="https://github.com/LewisArdern/bXSS">bXSS</a> &#8211; bXSS is a utility which can be used by bug hunters and organizations to identify Blind Cross-Site Scripting.</li>
+
+
+
+<li>
+<a href="https://github.com/whitel1st/docem">docem</a> &#8211; Uility to embed XXE and XSS payloads in docx,odt,pptx,etc (OXML_XEE on steroids)</li>
+
+
+
+<li>
+<a href="https://github.com/bugbountyforum/XSS-Radar">XSS-Radar</a> &#8211; XSS Radar is a tool that detects parameters and fuzzes them for cross-site scripting vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/rajeshmajumdar/BruteXSS">BruteXSS</a> &#8211; BruteXSS is a tool written in python simply to find XSS vulnerabilities in web application.</li>
+
+
+
+<li>
+<a href="https://github.com/dwisiswant0/findom-xss">findom-xss</a> &#8211; A fast DOM based XSS vulnerability scanner with simplicity.</li>
+
+
+
+<li>
+<a href="https://github.com/fcavallarin/domdig">domdig</a> &#8211; DOM XSS scanner for Single Page Applications</li>
+
+
+
+<li>
+<a href="https://github.com/wish-i-was/femida">femida</a> &#8211; Automated blind-xss search for Burp Suite</li>
+
+
+
+<li>
+<a href="https://github.com/SpiderMate/B-XSSRF">B-XSSRF</a> &#8211; Toolkit to detect and keep track on Blind XSS, XXE &amp; SSRF</li>
+
+
+
+<li>
+<a href="https://github.com/yaph/domxssscanner">domxssscanner</a> &#8211; DOMXSS Scanner is an online tool to scan source code for DOM based XSS vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/mandatoryprogrammer/xsshunter_client">xsshunter_client</a> &#8211; Correlated injection proxy tool for XSS Hunter</li>
+
+
+
+<li>
+<a href="https://github.com/Damian89/extended-xss-search">extended-xss-search</a> &#8211; A better version of my xssfinder tool &#8211; scans for different types of xss on a list of urls.</li>
+
+
+
+<li>
+<a href="https://github.com/Jewel591/xssmap">xssmap</a> &#8211; XSSMap &#8211; Python3</li>
+
+
+
+<li>
+<a href="https://github.com/menkrep1337/XSSCon">XSSCon</a> &#8211; XSSCon: Simple XSS Scanner tool</li>
+
+
+
+<li>
+<a href="https://github.com/BitTheByte/BitBlinder">BitBlinder</a> &#8211; BurpSuite extension to inject custom cross-site scripting payloads on every form/request submitted to detect blind XSS vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/dxa4481/XSSOauthPersistence">XSSOauthPersistence</a> &#8211; Maintaining account persistence via XSS and Oauth</li>
+
+
+
+<li>
+<a href="https://github.com/shadow-workers/shadow-workers">shadow-workers</a> &#8211; Shadow Workers is a free and open source C2 and proxy designed for penetration testers to help in the exploitation of XSS and malicious Service Workers (SW)</li>
+
+
+
+<li>
+<a href="https://github.com/profmoriarity/rexsser">rexsser</a> &#8211; This is a burp plugin that extracts keywords from response using regexes and test for reflected XSS on the target scope.</li>
+
+
+
+<li>
+<a href="https://github.com/EgeBalci/xss-flare">xss-flare</a> &#8211; XSS hunter on cloudflare serverless workers.</li>
+
+
+
+<li>
+<a href="https://github.com/jiangsir404/Xss-Sql-Fuzz">Xss-Sql-Fuzz</a> &#8211; burpsuite, fuzz, Xss</li>
+
+
+
+<li>
+<a href="https://github.com/hipotermia/vaya-ciego-nen">vaya-ciego-nen</a> &#8211; Detect, manage and exploit Blind Cross-site scripting (XSS) vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/AsaiKen/dom-based-xss-finder">dom-based-xss-finder</a> &#8211; Chrome extension that finds DOM based XSS vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/machinexa2/XSSTerminal">XSSTerminal</a> &#8211; Develop your own XSS Payload using interactive typing</li>
+
+
+
+<li>
+<a href="https://github.com/vavkamil/xss2png">xss2png</a> &#8211; PNG IDAT chunks XSS payload generator</li>
+
+
+
+<li>
+<a href="https://github.com/vavkamil/XSSwagger">XSSwagger</a> &#8211; A simple Swagger-ui scanner that can detect old versions vulnerable to various XSS attacks</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#xxe-injection"></a></h3>
+
+
+
+<h3 class="wp-block-heading">XXE Injection</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/jobertabma/ground-control">ground-control</a> &#8211; A collection of scripts that run on my web server. Mainly for debugging SSRF, blind XSS, and XXE vulnerabilities.</li>
+
+
+
+<li>
+<a href="https://github.com/GoSecure/dtd-finder">dtd-finder</a> &#8211; List DTDs and generate XXE payloads using those local DTDs.</li>
+
+
+
+<li>
+<a href="https://github.com/whitel1st/docem">docem</a> &#8211; Uility to embed XXE and XSS payloads in docx,odt,pptx,etc (OXML_XEE on steroids)</li>
+
+
+
+<li>
+<a href="https://github.com/staaldraad/xxeserv">xxeserv</a> &#8211; A mini webserver with FTP support for XXE payloads</li>
+
+
+
+<li>
+<a href="https://github.com/luisfontes19/xxexploiter">xxexploiter</a> &#8211; Tool to help exploit XXE vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/SpiderMate/B-XSSRF">B-XSSRF</a> &#8211; Toolkit to detect and keep track on Blind XSS, XXE &amp; SSRF</li>
+
+
+
+<li>
+<a href="https://github.com/enjoiz/XXEinjector">XXEinjector</a> &#8211; Tool for automatic exploitation of XXE vulnerability using direct and different out of band methods.</li>
+
+
+
+<li>
+<a href="https://github.com/BuffaloWill/oxml_xxe">oxml_xxe</a> &#8211; A tool for embedding XXE/XML exploits into different filetypes</li>
+
+
+
+<li>
+<a href="https://github.com/vp777/metahttp">metahttp</a> &#8211; A bash script that automates the scanning of a target network for HTTP resources through XXE</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h2 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#miscellaneous"></a></h2>
+
+
+
+<h2 class="wp-block-heading">Miscellaneous</h2>
+
+
+
+<p class="has-background" style="background-color:#1b1010">P, Git&#8217;s, buckets, CMS,</p>
+
+
+
+<h3 class="wp-block-heading">Passwords &amp; Secrets:</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/vanhauser-thc/thc-hydra">thc-hydra</a> &#8211; Hydra is a parallelized login cracker which supports numerous protocols to attack.</li>
+
+
+
+<li>
+<a href="https://github.com/ihebski/DefaultCreds-cheat-sheet">DefaultCreds-cheat-sheet</a> &#8211; One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password</li>
+
+
+
+<li>
+<a href="https://github.com/ztgrace/changeme">changeme</a> &#8211; A default credential scanner.</li>
+
+
+
+<li>
+<a href="https://github.com/1N3/BruteX">BruteX</a> &#8211; Automatically brute force all services running on a target.</li>
+
+
+
+<li>
+<a href="https://github.com/lanjelot/patator">patator</a> &#8211; Patator is a multi-purpose brute-forcer, with a modular design and a flexible usage.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#secrets"></a></h3>
+
+
+
+<h3 class="wp-block-heading">Secrets</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/awslabs/git-secrets">git-secrets</a> &#8211; Prevents you from committing secrets and credentials into git repositories</li>
+
+
+
+<li>
+<a href="https://github.com/zricethezav/gitleaks">gitleaks</a> &#8211; Scan git repos (or files) for secrets using regex and entropy</li>
+
+
+
+<li>
+<a href="https://github.com/dxa4481/truffleHog">truffleHog</a> &#8211; Searches through git repositories for high entropy strings and secrets, digging deep into commit history</li>
+
+
+
+<li>
+<a href="https://github.com/hisxo/gitGraber">gitGraber</a> &#8211; gitGraber: monitor GitHub to search and find sensitive data in real time for different online services</li>
+
+
+
+<li>
+<a href="https://github.com/thoughtworks/talisman">talisman</a> &#8211; By hooking into the pre-push hook provided by Git, Talisman validates the outgoing changeset for things that look suspicious &#8211; such as authorization tokens and private keys.</li>
+
+
+
+<li>
+<a href="https://github.com/BishopFox/GitGot">GitGot</a> &#8211; Semi-automated, feedback-driven tool to rapidly search through troves of public data on GitHub for sensitive secrets.</li>
+
+
+
+<li>
+<a href="https://github.com/anshumanbh/git-all-secrets">git-all-secrets</a> &#8211; A tool to capture all the git secrets by leveraging multiple open source git searching tools</li>
+
+
+
+<li>
+<a href="https://github.com/gwen001/github-search">github-search</a> &#8211; Tools to perform basic search on GitHub.</li>
+
+
+
+<li>
+<a href="https://github.com/cve-search/git-vuln-finder">git-vuln-finder</a> &#8211; Finding potential software vulnerabilities from git commit messages</li>
+
+
+
+<li>
+<a href="https://github.com/x1sec/commit-stream">commit-stream</a> &#8211; #OSINT tool for finding Github repositories by extracting commit logs in real time from the Github event API</li>
+
+
+
+<li>
+<a href="https://github.com/michenriksen/gitrob">gitrob</a> &#8211; Reconnaissance tool for GitHub organizations</li>
+
+
+
+<li>
+<a href="https://github.com/auth0/repo-supervisor">repo-supervisor</a> &#8211; Scan your code for security misconfiguration, search for passwords and secrets.</li>
+
+
+
+<li>
+<a href="https://github.com/UnkL4b/GitMiner">GitMiner</a> &#8211; Tool for advanced mining for content on Github</li>
+
+
+
+<li>
+<a href="https://github.com/eth0izzle/shhgit">shhgit</a> &#8211; Ah shhgit! Find GitHub secrets in real time</li>
+
+
+
+<li>
+<a href="https://github.com/Yelp/detect-secrets">detect-secrets</a> &#8211; An enterprise friendly way of detecting and preventing secrets in code.</li>
+
+
+
+<li>
+<a href="https://github.com/newrelic/rusty-hog">rusty-hog</a> &#8211; A suite of secret scanners built in Rust for performance. Based on TruffleHog</li>
+
+
+
+<li>
+<a href="https://github.com/Skyscanner/whispers">whispers</a> &#8211; Identify hardcoded secrets and dangerous behaviours</li>
+
+
+
+<li>
+<a href="https://github.com/nielsing/yar">yar</a> &#8211; Yar is a tool for plunderin&#8217; organizations, users and/or repositories.</li>
+
+
+
+<li>
+<a href="https://github.com/BishopFox/dufflebag">dufflebag</a> &#8211; Search exposed EBS volumes for secrets</li>
+
+
+
+<li>
+<a href="https://github.com/duo-labs/secret-bridge">secret-bridge</a> &#8211; Monitors Github for leaked secrets</li>
+
+
+
+<li>
+<a href="https://github.com/americanexpress/earlybird">earlybird</a> &#8211; EarlyBird is a sensitive data detection tool capable of scanning source code repositories for clear text password violations, PII, outdated cryptography methods, key files and more.</li>
+
+
+
+<li>
+<a href="https://github.com/trufflesecurity/Trufflehog-Chrome-Extension">Trufflehog-Chrome-Extension</a> &#8211; Trufflehog-Chrome-Extension</li>
+
+
+
+<li>
+<a href="https://github.com/praetorian-inc/noseyparker">noseyparker</a> &#8211; Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#git"></a></h3>
+
+
+
+<h3 class="wp-block-heading">Git</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/internetwache/GitTools">GitTools</a> &#8211; A repository with 3 tools for pwn&#8217;ing websites with .git repositories available</li>
+
+
+
+<li>
+<a href="https://github.com/liamg/gitjacker">gitjacker</a> &#8211; Leak git repositories from misconfigured websites</li>
+
+
+
+<li>
+<a href="https://github.com/arthaud/git-dumper">git-dumper</a> &#8211; A tool to dump a git repository from a website</li>
+
+
+
+<li>
+<a href="https://github.com/digininja/GitHunter">GitHunter</a> &#8211; A tool for searching a Git repository for interesting content</li>
+
+
+
+<li>
+<a href="https://github.com/kost/dvcs-ripper">dvcs-ripper</a> &#8211; Rip web accessible (distributed) version control systems: SVN/GIT/HG&#8230;</li>
+
+
+
+<li>
+<a href="https://github.com/praetorian-inc/gato">Gato (Github Attack TOolkit)</a> &#8211; GitHub Self-Hosted Runner Enumeration and Attack Tool</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#buckets"></a></h3>
+
+
+
+<h3 class="wp-block-heading">Buckets</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/sa7mon/S3Scanner">S3Scanner</a> &#8211; Scan for open AWS S3 buckets and dump the contents</li>
+
+
+
+<li>
+<a href="https://github.com/jordanpotti/AWSBucketDump">AWSBucketDump</a> &#8211; Security Tool to Look For Interesting Files in S3 Buckets</li>
+
+
+
+<li>
+<a href="https://github.com/jordanpotti/CloudScraper">CloudScraper</a> &#8211; CloudScraper: Tool to enumerate targets in search of cloud resources. S3 Buckets, Azure Blobs, Digital Ocean Storage Space.</li>
+
+
+
+<li>
+<a href="https://github.com/SharonBrizinov/s3viewer">s3viewer</a> &#8211; Publicly Open Amazon AWS S3 Bucket Viewer</li>
+
+
+
+<li>
+<a href="https://github.com/cr0hn/festin">festin</a> &#8211; FestIn &#8211; S3 Bucket Weakness Discovery</li>
+
+
+
+<li>
+<a href="https://github.com/hahwul/s3reverse">s3reverse</a> &#8211; The format of various s3 buckets is convert in one format. for bugbounty and security testing.</li>
+
+
+
+<li>
+<a href="https://github.com/random-robbie/mass-s3-bucket-tester">mass-s3-bucket-tester</a> &#8211; This tests a list of s3 buckets to see if they have dir listings enabled or if they are uploadable</li>
+
+
+
+<li>
+<a href="https://github.com/AlecBlance/S3BucketList">S3BucketList</a> &#8211; Firefox plugin that lists Amazon S3 Buckets found in requests</li>
+
+
+
+<li>
+<a href="https://github.com/cybercdh/dirlstr">dirlstr</a> &#8211; Finds Directory Listings or open S3 buckets from a list of URLs</li>
+
+
+
+<li>
+<a href="https://github.com/codewatchorg/Burp-AnonymousCloud">Burp-AnonymousCloud</a> &#8211; Burp extension that performs a passive scan to identify cloud buckets and then test them for publicly accessible vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/abuvanth/kicks3">kicks3</a> &#8211; S3 bucket finder from html,js and bucket misconfiguration testing tool</li>
+
+
+
+<li>
+<a href="https://github.com/Revenant40/2tearsinabucket">2tearsinabucket</a> &#8211; Enumerate s3 buckets for a specific target.</li>
+
+
+
+<li>
+<a href="https://github.com/nccgroup/s3_objects_check">s3_objects_check</a> &#8211; Whitebox evaluation of effective S3 object permissions, to identify publicly accessible files.</li>
+
+
+
+<li>
+<a href="https://github.com/ankane/s3tk">s3tk</a> &#8211; A security toolkit for Amazon S3</li>
+
+
+
+<li>
+<a href="https://github.com/0xsha/CloudBrute">CloudBrute</a> &#8211; Awesome cloud enumerator</li>
+
+
+
+<li>
+<a href="https://github.com/0xspade/s3cario">s3cario</a> &#8211; This tool will get the CNAME first if it&#8217;s a valid Amazon s3 bucket and if it&#8217;s not, it will try to check if the domain is a bucket name.</li>
+
+
+
+<li>
+<a href="https://github.com/JR0ch17/S3Cruze">S3Cruze</a> &#8211; All-in-one AWS S3 bucket tool for pentesters.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#cms"></a></h3>
+
+
+
+<h3 class="wp-block-heading">CMS</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/wpscanteam/wpscan">wpscan</a> &#8211; WPScan is a free, for non-commercial use, black box WordPress security scanner</li>
+
+
+
+<li>
+<a href="https://github.com/cyc10n3/WPSpider">WPSpider</a> &#8211; A centralized dashboard for running and scheduling WordPress scans powered by wpscan utility.</li>
+
+
+
+<li>
+<a href="https://github.com/blackcrw/wprecon">wprecon</a> &#8211; WordPress Recon</li>
+
+
+
+<li>
+<a href="https://github.com/Dionach/CMSmap">CMSmap</a> &#8211; CMSmap is a python open source CMS scanner that automates the process of detecting security flaws of the most popular CMSs.</li>
+
+
+
+<li>
+<a href="https://github.com/OWASP/joomscan">joomscan</a> &#8211; OWASP Joomla Vulnerability Scanner Project</li>
+
+
+
+<li>
+<a href="https://github.com/fgeek/pyfiscan">pyfiscan</a> &#8211; Free web-application vulnerability and version scanner</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#json-web-token"></a></h3>
+
+
+
+<h3 class="wp-block-heading">JSON Web Token</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/ticarpi/jwt_tool">jwt_tool</a> &#8211; A toolkit for testing, tweaking and cracking JSON Web Tokens</li>
+
+
+
+<li>
+<a href="https://github.com/brendan-rius/c-jwt-cracker">c-jwt-cracker</a> &#8211; JWT brute force cracker written in C</li>
+
+
+
+<li>
+<a href="https://github.com/wallarm/jwt-heartbreaker">jwt-heartbreaker</a> &#8211; The Burp extension to check JWT (JSON Web Tokens) for using keys from known from public sources</li>
+
+
+
+<li>
+<a href="https://github.com/KINGSABRI/jwtear">jwtear</a> &#8211; Modular command-line tool to parse, create and manipulate JWT tokens for hackers</li>
+
+
+
+<li>
+<a href="https://github.com/dariusztytko/jwt-key-id-injector">jwt-key-id-injector</a> &#8211; Simple python script to check against hypothetical JWT vulnerability.</li>
+
+
+
+<li>
+<a href="https://github.com/hahwul/jwt-hack">jwt-hack</a> &#8211; jwt-hack is tool for hacking / security testing to JWT.</li>
+
+
+
+<li>
+<a href="https://github.com/lmammino/jwt-cracker">jwt-cracker</a> &#8211; Simple HS256 JWT token brute force cracker</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#postmessage"></a></h3>
+
+
+
+<h3 class="wp-block-heading">postMessage</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/fransr/postMessage-tracker">postMessage-tracker</a> &#8211; A Chrome Extension to track postMessage usage (url, domain and stack) both by logging using CORS and also visually as an extension-icon</li>
+
+
+
+<li>
+<a href="https://github.com/kiranreddyrebel/PostMessage_Fuzz_Tool">PostMessage_Fuzz_Tool</a> &#8211; #BugBounty #BugBounty Tools #WebDeveloper Tool</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#subdomain-takeover"></a></h3>
+
+
+
+<h3 class="wp-block-heading">Subdomain Takeover</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/haccer/subjack">subjack</a> &#8211; Subdomain Takeover tool written in Go</li>
+
+
+
+<li>
+<a href="https://github.com/Ice3man543/SubOver">SubOver</a> &#8211; A Powerful Subdomain Takeover Tool</li>
+
+
+
+<li>
+<a href="https://github.com/JordyZomer/autoSubTakeover">autoSubTakeover</a> &#8211; A tool used to check if a CNAME resolves to the scope address. If the CNAME resolves to a non-scope address it might be worth checking out if subdomain takeover is possible.</li>
+
+
+
+<li>
+<a href="https://github.com/shivsahni/NSBrute">NSBrute</a> &#8211; Python utility to takeover domains vulnerable to AWS NS Takeover</li>
+
+
+
+<li>
+<a href="https://github.com/EdOverflow/can-i-take-over-xyz">can-i-take-over-xyz</a> &#8211; &#8220;Can I take over XYZ?&#8221; — a list of services and how to claim (sub)domains with dangling DNS records.</li>
+
+
+
+<li>
+<a href="https://github.com/cybercdh/cnames">cnames</a> &#8211; take a list of resolved subdomains and output any corresponding CNAMES en masse.</li>
+
+
+
+<li>
+<a href="https://github.com/vavkamil/old-repos-backup/tree/master/subHijack-master">subHijack</a> &#8211; Hijacking forgotten &amp; misconfigured subdomains</li>
+
+
+
+<li>
+<a href="https://github.com/anshumanbh/tko-subs">tko-subs</a> &#8211; A tool that can help detect and takeover subdomains with dead DNS records</li>
+
+
+
+<li>
+<a href="https://github.com/nahamsec/HostileSubBruteforcer">HostileSubBruteforcer</a> &#8211; This app will bruteforce for exisiting subdomains and provide information if the 3rd party host has been properly setup.</li>
+
+
+
+<li>
+<a href="https://github.com/mhmdiaa/second-order">second-order</a> &#8211; Second-order subdomain takeover scanner</li>
+
+
+
+<li>
+<a href="https://github.com/mzfr/takeover">takeover</a> &#8211; A tool for testing subdomain takeover possibilities at a mass scale.</li>
+
+
+
+<li>
+<a href="https://github.com/punk-security/dnsReaper">dnsReaper</a> &#8211; DNS Reaper is yet another sub-domain takeover tool, but with an emphasis on accuracy, speed and the number of signatures in our arsenal!</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#vulnerability-scanners"></a></h3>
+
+
+
+<h3 class="wp-block-heading">Vulnerability Scanners</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/projectdiscovery/nuclei">nuclei</a> &#8211; Nuclei is a fast tool for configurable targeted scanning based on templates offering massive extensibility and ease of use.</li>
+
+
+
+<li>
+<a href="https://github.com/1N3/Sn1per">Sn1per</a> &#8211; Automated pentest framework for offensive security experts</li>
+
+
+
+<li>
+<a href="https://github.com/rapid7/metasploit-framework">metasploit-framework</a> &#8211; Metasploit Framework</li>
+
+
+
+<li>
+<a href="https://github.com/sullo/nikto">nikto</a> &#8211; Nikto web server scanner</li>
+
+
+
+<li>
+<a href="https://github.com/Arachni/arachni">arachni</a> &#8211; Web Application Security Scanner Framework</li>
+
+
+
+<li>
+<a href="https://github.com/jaeles-project/jaeles">jaeles</a> &#8211; The Swiss Army knife for automated Web Application Testing</li>
+
+
+
+<li>
+<a href="https://github.com/RetireJS/retire.js">retire.js</a> &#8211; scanner detecting the use of JavaScript libraries with known vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/j3ssie/Osmedeus">Osmedeus</a> &#8211; Fully automated offensive security framework for reconnaissance and vulnerability scanning</li>
+
+
+
+<li>
+<a href="https://github.com/vulnersCom/getsploit">getsploit</a> &#8211; Command line utility for searching and downloading exploits</li>
+
+
+
+<li>
+<a href="https://github.com/cloudflare/flan">flan</a> &#8211; A pretty sweet vulnerability scanner</li>
+
+
+
+<li>
+<a href="https://github.com/1N3/Findsploit">Findsploit</a> &#8211; Find exploits in local and online databases instantly</li>
+
+
+
+<li>
+<a href="https://github.com/1N3/BlackWidow">BlackWidow</a> &#8211; A Python based web application scanner to gather OSINT and fuzz for OWASP vulnerabilities on a target website.</li>
+
+
+
+<li>
+<a href="https://github.com/PortSwigger/backslash-powered-scanner">backslash-powered-scanner</a> &#8211; Finds unknown classes of injection vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/BitTheByte/Eagle">Eagle</a> &#8211; Multithreaded Plugin based vulnerability scanner for mass detection of web-based applications vulnerabilities</li>
+
+
+
+<li>
+<a href="https://github.com/edoardottt/cariddi">cariddi</a> &#8211; Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more&#8230;</li>
+
+
+
+<li>
+<a href="https://github.com/zaproxy/zaproxy">OWASP ZAP</a> &#8211; World’s most popular free web security tools and is actively maintained by a dedicated international team of volunteers</li>
+
+
+
+<li>
+<a href="https://github.com/vladko312/SSTImap">SSTImap</a> &#8211; SSTImap is a penetration testing software that can check websites for Code Injection and Server-Side Template Injection vulnerabilities and exploit them, giving access to the operating system itself.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://github.com/vavkamil/awesome-bugbounty-tools#uncategorized"></a></h3>
+
+
+
+<h3 class="wp-block-heading">Uncategorized</h3>
+
+
+
+<ul>
+<li>
+<a href="https://github.com/zigoo0/JSONBee">JSONBee</a> &#8211; A ready to use JSONP endpoints/payloads to help bypass content security policy (CSP) of different websites.</li>
+
+
+
+<li>
+<a href="https://github.com/gchq/CyberChef">CyberChef</a> &#8211; The Cyber Swiss Army Knife &#8211; a web app for encryption, encoding, compression and data analysis</li>
+
+
+
+<li>
+<a href="https://github.com/vavkamil/awesome-bugbounty-tools/blob/main"></a> &#8211;</li>
+
+
+
+<li>
+<a href="https://github.com/fransr/bountyplz">bountyplz</a> &#8211; Automated security reporting from markdown templates (HackerOne and Bugcrowd are currently the platforms supported)</li>
+
+
+
+<li>
+<a href="https://github.com/swisskyrepo/PayloadsAllTheThings">PayloadsAllTheThings</a> &#8211; A list of useful payloads and bypass for Web Application Security and Pentest/CTF</li>
+
+
+
+<li>
+<a href="https://github.com/arkadiyt/bounty-targets-data">bounty-targets-data</a> &#8211; This repo contains hourly-updated data dumps of bug bounty platform scopes (like Hackerone/Bugcrowd/Intigriti/etc) that are eligible for reports</li>
+
+
+
+<li>
+<a href="https://github.com/ashishb/android-security-awesome">android-security-awesome</a> &#8211; A collection of android security related resources</li>
+
+
+
+<li>
+<a href="https://github.com/vaib25vicky/awesome-mobile-security">awesome-mobile-security</a> &#8211; An effort to build a single place for all useful android and iOS security related stuff.</li>
+
+
+
+<li>
+<a href="https://github.com/vavkamil/awesome-vulnerable-apps">awesome-vulnerable-apps</a> &#8211; Awesome Vulnerable Applications</li>
+
+
+
+<li>
+<a href="https://github.com/vavkamil/XFFenum">XFFenum</a> &#8211; X-Forwarded-For [403 forbidden] enumeration</li>
+
+
+
+<li>
+<a href="https://github.com/projectdiscovery/httpx">httpx</a> &#8211; httpx is a fast and multi-purpose HTTP toolkit allow to run multiple probers using retryablehttp library, it is designed to maintain the result reliability with increased threads.</li>
+
+
+
+<li>
+<a href="https://github.com/edoardottt/csprecon">csprecon</a> &#8211; Discover new target domains using Content Security Policy</li>
+</ul>
+
+
+
+<p>Note: Some of this material was lifted from | <a rel="noreferrer noopener" href="https://github.com/vavkamil/awesome-bugbounty-tools" target="_blank">https://github.com/vavkamil/awesome-bugbounty-tools</a></p>
+		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+						</div>
+				<div data-elementor-type="footer" data-elementor-id="1431" class="elementor elementor-1431 elementor-location-footer">
+								<section class="elementor-section elementor-top-section elementor-element elementor-element-941d6da elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="941d6da" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d35b2e8" data-id="d35b2e8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b997717 elementor-widget elementor-widget-heading" data-id="b997717" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">&copy; 2023  Bug Hunter, All Rights Reserved</p>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+						</div>
+		
+<script src="/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0" id="hello-theme-frontend-js"></script>
+<script defer src="https://stats.wp.com/e-202345.js" id="jetpack-stats-js"></script>
+<script id="jetpack-stats-js-after">
+_stq = window._stq || [];
+_stq.push([ "view", {v:'ext',blog:'219665829',post:'1482',tz:'0',srv:'bughunter.com',j:'1:12.6.2'} ]);
+_stq.push([ "clickTrackerInit", "219665829", "1482" ]);
+</script>
+<script src="/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1" id="smartmenus-js"></script>
+<script src="/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.12.1" id="elementor-pro-webpack-runtime-js"></script>
+<script src="/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.16.4" id="elementor-webpack-runtime-js"></script>
+<script src="/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.16.4" id="elementor-frontend-modules-js"></script>
+<script src="/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
+<script src="/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
+<script src="/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script src="/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+<script src="/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"\/wp-admin\/admin-ajax.php","nonce":"ed9c0a618b","urls":{"assets":"\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.12.1" id="elementor-pro-frontend-js"></script>
+<script src="/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+<script src="/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-extra">
+var uael_particles_script = {"uael_particles_url":"\/wp-content\/plugins\/ultimate-elementor\/assets\/min-js\/uael-particles.min.js","particles_url":"\/wp-content\/plugins\/ultimate-elementor\/assets\/lib\/particles\/particles.min.js","snowflakes_image":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/snowflake.svg","gift":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/gift.png","tree":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/tree.png","skull":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/skull.png","ghost":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/ghost.png","moon":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/moon.png","bat":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/bat.png","pumpkin":"\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/pumpkin.png"};
+</script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.16.4","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"additional_custom_breakpoints":true,"e_swiper_latest":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"landing-pages":true,"page-transitions":true,"notes":true,"loop":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":1482,"title":"Tools%20%E2%80%93%20bughunter","excerpt":"","featuredImage":false}};
+</script>
+<script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.16.4" id="elementor-frontend-js"></script>
+<script id="elementor-frontend-js-after">
+window.scope_array = [];
+								window.backend = 0;
+								jQuery.cachedScript = function( url, options ) {
+									// Allow user to set any option except for dataType, cache, and url.
+									options = jQuery.extend( options || {}, {
+										dataType: "script",
+										cache: true,
+										url: url
+									});
+									// Return the jqXHR object so we can chain callbacks.
+									return jQuery.ajax( options );
+								};
+							    jQuery( window ).on( "elementor/frontend/init", function() {
+									elementorFrontend.hooks.addAction( "frontend/element_ready/global", function( $scope, $ ){
+										if ( "undefined" == typeof $scope ) {
+												return;
+										}
+										if ( $scope.hasClass( "uael-particle-yes" ) ) {
+											window.scope_array.push( $scope );
+											$scope.find(".uael-particle-wrapper").addClass("js-is-enabled");
+										}else{
+											return;
+										}
+										if(elementorFrontend.isEditMode() && $scope.find(".uael-particle-wrapper").hasClass("js-is-enabled") && window.backend == 0 ){		
+											var uael_url = uael_particles_script.uael_particles_url;
+											
+											jQuery.cachedScript( uael_url );
+											window.backend = 1;
+										}else if(elementorFrontend.isEditMode()){
+											var uael_url = uael_particles_script.uael_particles_url;
+											jQuery.cachedScript( uael_url ).done(function(){
+												var flag = true;
+											});
+										}
+									});
+								});
+								 jQuery( document ).on( "ready elementor/popup/show", () => {
+									if ( jQuery.find( ".uael-particle-yes" ).length < 1 ) {
+										return;
+									}
+									var uael_url = uael_particles_script.uael_particles_url;
+									jQuery.cachedScript = function( url, options ) {
+										// Allow user to set any option except for dataType, cache, and url.
+										options = jQuery.extend( options || {}, {
+											dataType: "script",
+											cache: true,
+											url: url
+										});
+										// Return the jqXHR object so we can chain callbacks.
+										return jQuery.ajax( options );
+									};
+									jQuery.cachedScript( uael_url );
+								});	
+</script>
+<script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.12.1" id="pro-elements-handlers-js"></script>
+<script src="/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.12.1" id="e-sticky-js"></script>
+
+</body>
+</html>
