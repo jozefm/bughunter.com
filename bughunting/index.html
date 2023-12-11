@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>Bug Bounties &#8211; bughunter</title>
+	<title>Bug &#8211; Hunting</title>
 <meta name="robots" content="max-image-preview:large">
 <link rel="dns-prefetch" href="//stats.wp.com">
 <link rel="alternate" type="application/rss+xml" title="bughunter &raquo; Feed" href="/feed/">
@@ -62,329 +62,172 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 <link rel="shortlink" href="/?p=1460">
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fbug-bounty-101%2F">
 <link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fbug-bounty-101%2F&#038;format=xml">
-	<style>img#wpstats{display:none}</style>
-		<meta name="generator" content="Elementor 3.16.4; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<style>img#wpstats{display:none}</style>
+<meta name="generator" content="Elementor 3.16.4; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
 <link rel="icon" href="/wp-content/uploads/2023/08/cropped-526-32x32.png" sizes="32x32">
 <link rel="icon" href="/wp-content/uploads/2023/08/cropped-526-192x192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/wp-content/uploads/2023/08/cropped-526-180x180.png">
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2023/08/cropped-526-270x270.png">
-</head>
-<body class="page-template-default page page-id-1460 wp-custom-logo elementor-default elementor-kit-1391 elementor-page-1815">
+</head><body class="page-template-default page page-id-1460 wp-custom-logo elementor-default elementor-kit-1391 elementor-page-1815">
 
-
-<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
-		<div data-elementor-type="single-page" data-elementor-id="1815" class="elementor elementor-1815 elementor-location-single post-1460 page type-page status-publish hentry">
-								<section class="elementor-section elementor-top-section elementor-element elementor-element-c8c4502 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c8c4502" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-df4e401" data-id="df4e401" data-element_type="column">
+			<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+			<div data-elementor-type="single-page" data-elementor-id="1815" class="elementor elementor-1815 elementor-location-single post-1460 page type-page status-publish hentry">
+			<section class="elementor-section elementor-top-section elementor-element elementor-element-c8c4502 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c8c4502" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-df4e401" data-id="df4e401" data-element_type="column">
 			<div class="elementor-widget-wrap">
-									</div>
 		</div>
-							</div>
+		</div>
+		</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-aff64c0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="aff64c0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b447bfd" data-id="b447bfd" data-element_type="column">
+			<section class="elementor-section elementor-top-section elementor-element elementor-element-aff64c0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="aff64c0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b447bfd" data-id="b447bfd" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<section class="elementor-section elementor-inner-section elementor-element elementor-element-0bc644e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0bc644e" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dd30957" data-id="dd30957" data-element_type="column">
+			<section class="elementor-section elementor-inner-section elementor-element elementor-element-0bc644e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0bc644e" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+			<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dd30957" data-id="dd30957" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-1b30999 elementor-widget elementor-widget-heading" data-id="1b30999" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
+			<div class="elementor-element elementor-element-1b30999 elementor-widget elementor-widget-heading" data-id="1b30999" data-element_type="widget" data-widget_type="heading.default">
+			<div class="elementor-widget-container">
 			<style>/*! elementor - v3.16.0 - 20-09-2023 */
 .elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style>
 <h3 class="elementor-heading-title elementor-size-default">Topics</h3>		</div>
-				</div>
-				<div class="elementor-element elementor-element-d156eec elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="d156eec" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
-				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css">			<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
-				<ul id="menu-1-d156eec" class="elementor-nav-menu sm-vertical">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817"><a href="/burp-intro/" class="elementor-item">burp-intro</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><a href="/burp-install/" class="elementor-item">Burp-Install</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="/burpsuite/" class="elementor-item">Burp Suite</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="/burp-proxy/" class="elementor-item">Burp-Proxy</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Burp-Spider</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823"><a href="/burp-and-fuff/" class="elementor-item">Burp and fuff</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1825"><a href="/project/" class="elementor-item">Project &#8220;Mission&#8221; Management</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1818"><a href="/bughunter-tools/" class="elementor-item">Bughunter-tools</a></li>
-</ul>			</nav>
-					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
-			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
-		</div>
-					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-d156eec" class="elementor-nav-menu sm-vertical">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817"><a href="/burp-intro/" class="elementor-item" tabindex="-1">burp-intro</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><a href="/burp-install/" class="elementor-item" tabindex="-1">Burp-Install</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="/burpsuite/" class="elementor-item" tabindex="-1">Burp Suite</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="/burp-proxy/" class="elementor-item" tabindex="-1">Burp-Proxy</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item" tabindex="-1">Burp-Spider</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823"><a href="/burp-and-fuff/" class="elementor-item" tabindex="-1">Burp and fuff</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1825"><a href="/project/" class="elementor-item" tabindex="-1">Project &#8220;Mission&#8221; Management</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1818"><a href="/bughunter-tools/" class="elementor-item" tabindex="-1">Bughunter-tools</a></li>
-</ul>			</nav>
-				</div>
-				</div>
-					</div>
-		</div>
-							</div>
-		</section>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-004857d" data-id="004857d" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-7cbe26e elementor-widget__width-initial elementor-widget elementor-widget-theme-post-content" data-id="7cbe26e" data-element_type="widget" data-widget_type="theme-post-content.default">
-				<div class="elementor-widget-container">
-			
+			</div>
+			<div class="elementor-element elementor-element-d156eec elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="d156eec" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+			<div class="elementor-widget-container">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css"><nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+			<ul id="menu-1-d156eec" class="elementor-nav-menu sm-vertical">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817"><a href="/burp-intro/" class="elementor-item">Recon-Intro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><a href="/burp-install/" class="elementor-item">Recon-Basics</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="/burpsuite/" class="elementor-item">Recon-Passive</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="/burp-proxy/" class="elementor-item">Recon-Active</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Recon-Interactive</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Recon-Virtual</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Recon-tools</a></li>
+</ul></nav>
+		<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+		<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			
+		<span class="elementor-screen-only">Menu</span></div>
+		<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+		<ul id="menu-2-d156eec" class="elementor-nav-menu sm-vertical">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817"><a href="/burp-intro/" class="elementor-item">Recon-Intro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><a href="/burp-install/" class="elementor-item">Recon-Basics</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="/burpsuite/" class="elementor-item">Recon-Passive</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="/burp-proxy/" class="elementor-item">Recon-Active</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Recon-Interactive</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Recon-Virtual</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="/burp-spider/" class="elementor-item">Recon-tools</a></li>
+		</ul></nav></div></div></div></div></div></section></div></div>
+		<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-004857d" data-id="004857d" data-element_type="column">
+		<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-7cbe26e elementor-widget__width-initial elementor-widget elementor-widget-theme-post-content" data-id="7cbe26e" data-element_type="widget" data-widget_type="theme-post-content.default">
+		<div class="elementor-widget-container">
 <p><em>Bug Bounty &amp; Hunter Workshop is a 2-day intensive training course designed to teach you about Bug Bounty programs and how to effectively and efficiently </em>use each program and platform.</p>
-
-
-
 <p>Getting started in bug bounty hunting has never been easier, it can be a rewarding, educational or could lead to a new career. </p>
-
-
-
 <p>There is no Gartner, Forrester or IDC Magic Quadrant for Bug Bounties, if there was it would encompus Crowd Sourced Security Testing, or Application Crowd Testing Services. However since there is no such thing, we hope our list provides you with information to act on. Below are the top VDP platforms in order of popularity and influence on the bug bounty industry, as well as the top 20 programs and who hosts them, and then each of the platforms customers.</p>
-
-
-
 <ol>
 <li>
 <a rel="noreferrer noopener" href="https://www.hackerone.com/" target="_blank">HackerOne</a> &#8211; Since 2012, 1700 customers, full feature. Public Bug Bounty Program List: <a rel="noreferrer noopener" href="https://hackerone.com/bug-bounty-programs" target="_blank">HackerOne</a>
 </li>
-
-
-
 <li>
 <a rel="noreferrer noopener" href="https://www.bugcrowd.com/" target="_blank">BugCrowd</a> &#8211; Since 2011, full feature. Public Bug Bounty Program List <a rel="noreferrer noopener" href="https://www.bugcrowd.com/bug-bounty-list/" target="_blank">Bugcrowd</a>
 </li>
-
-
-
 <li>
 <a href="https://www.openbugbounty.org/" target="_blank" rel="noreferrer noopener">Open Bug Bounty</a> &#8211; 1M coordinated disclosures, 1800 programs</li>
-
-
-
 <li>
 <a href="https://www.synack.com/solutions/go-beyond-bug-bounty/" target="_blank" rel="noreferrer noopener">SynAck</a> &#8211; Pentesting, AppSec, Bug Bounty, API Testing</li>
-
-
-
 <li>
 <a href="https://www.intigriti.com/" target="_blank" rel="noreferrer noopener">Intigriti</a> &#8211; Since 2016, Easy to use, private and public bounties</li>
-
-
-
 <li>
 <a rel="noreferrer noopener" href="https://hackenproof.com/" target="_blank">HackenProof</a> &#8211; Web3 Bug Bounty Platform, 25k Hackers, </li>
-
-
-
 <li>
 <a href="https://immunefi.com/" target="_blank" rel="noreferrer noopener">Immunefi</a> &#8211; Web3 Bug Bounty Platform</li>
-
-
-
 <li>
 <a rel="noreferrer noopener" href="http://Disclose.io/" target="_blank">Disclose.io</a> &#8211; easy to manage VDP, obtain assistance</li>
-
-
-
 <li>
 <a href="https://www.testbirds.com/en/services/quality-assurance/bug-bounty/" target="_blank" rel="noreferrer noopener">Testbirds</a> &#8211; Quality Assurance Bug Bounty Program Management</li>
-
-
-
 <li>
 <a href="https://bugbounter.com/bug-bounty/" target="_blank" rel="noreferrer noopener">Bugbounter</a> &#8211; Mitigate your Risks, Bug Bounty, Red Team, Pentest, VDP</li>
-
-
-
 <li>
 <a href="https://nordicdefender.com/" target="_blank" rel="noreferrer noopener">Nordic Defender</a> &#8211; More of a (PTaaS) Crowd Sourced Pentesting company</li>
-
-
-
 <li>
 <a href="https://hckrt.com/" target="_blank" rel="noreferrer noopener">HackRate</a> &#8211; Crowdsourced approach for continuous security testing</li>
-
-
-
 <li>
 <a rel="noreferrer noopener" href="https://bountysource.com/" target="_blank">Bountysource</a>&#8211; Segment your projects into self-contained task bug bounties</li>
-
-
-
 <li>
 <a href="https://bugv.io/" target="_blank" rel="noreferrer noopener">bugV</a> &#8211; Crowdsourcing Cybersecurity Platform, Next Gen Pentesting</li>
-
-
-
 <li>
 <a href="https://www.zerocopter.com/bug-bounty-programs-and-how-to-use-them" target="_blank" rel="noreferrer noopener">Zerocopter</a> &#8211; Organize and help you with your VDP</li>
-
-
-
 <li>
 <a rel="noreferrer noopener" href="http://hacktrophy.com/" target="_blank">HackTrophy</a> &#8211; They put companies in touch with ethical hackers, subscriptions.</li>
-
-
-
 <li>
 <a href="https://bugbounty.jp/en/" target="_blank" rel="noreferrer noopener">BugBounty.JP</a> &#8211; Bug Bounty Japan powered by Sprout</li>
-
-
-
 <li>YesWeHack &#8211; VDP and PTM programs</li>
-</ol>
-
-
-
-<p></p>
-
-
-
-<p></p>
-
-
-
+</ol><p></p><p></p>
 <p><strong>Top 20 programs and platforms:</strong></p>
-
-
-
 <ol>
 <li>Intel &#8211; Intel bug bounty program is managed by <a href="https://www.intigriti.com/" target="_blank" rel="noreferrer noopener">Intigriti</a> as of 2021.</li>
-
-
-
 <li>Yahoo &#8211; Yahoo bug bounty program is managed by <a rel="noreferrer noopener" href="https://hackerone.com/yahoo" target="_blank">HackerOne</a>
 </li>
-
-
-
 <li>Snapchat &#8211; Snapchat bug bounty program is managed by <a href="https://hackerone.com/snapchat" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>Dropbox &#8211; Dropbox Bug Bounty Program is managed by <a href="https://bugcrowd.com/dropbox" target="_blank" rel="noreferrer noopener">Bugcrowd</a>
 </li>
-
-
-
 <li>Apple &#8211; Apple Bug Bounty Program is managed internally by <a href="https://security.apple.com/bounty/guidelines/" target="_blank" rel="noreferrer noopener">Apple</a>
 </li>
-
-
-
 <li>Facebook Meta &#8211; The Facebook/Meta Bug Bounty program by <a href="https://www.facebook.com/whitehat" target="_blank" rel="noreferrer noopener">Meta</a>
 </li>
-
-
-
 <li>Google &#8211; The Google VRP and related is hosted by <a rel="noreferrer noopener" href="https://bughunters.google.com/" target="_blank">Google</a> Bug Hunter Program.</li>
-
-
-
 <li>Quora &#8211; The Quora Bug Bounty Program is managed by <a href="https://hackerone.com/quora" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>Mozilla &#8211; Mozilla Bug Bounty Program is managed internally &#8211; <a href="//a" target="_blank" rel="noreferrer noopener">moz://a</a>
 </li>
-
-
-
 <li>Microsoft &#8211; Microsoft Bug Bounty Program is managed internally &#8211; <a href="https://www.microsoft.com/en-us/msrc/bounty-terms" target="_blank" rel="noreferrer noopener">MSRC</a>
 </li>
-
-
-
 <li>Vimeo &#8211; The Vimeo Bug Bounty Program is managed by <a href="https://hackerone.com/vimeo" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>Twitter &#8211; The Twitter Bug Bounty Program is managed by <a href="https://hackerone.com/twitter" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>Apache &#8211; The Apache Bug Bounty Program is managed by <a rel="noreferrer noopener" href="https://hackerone.com/apache" target="_blank">HackerOne</a>
 </li>
-
-
-
 <li>Paypal &#8211; The Paypal bug bounty program is managed by <a rel="noreferrer noopener" href="https://hackerone.com/snapchat" target="_blank">HackerOne</a>
 </li>
-
-
-
 <li>Github &#8211; The GitHub Bug Bounty Program is managed internally &#8211; <a href="https://bounty.github.com/" target="_blank" rel="noreferrer noopener">GitHub</a>
 </li>
-
-
-
 <li>Uber &#8211; The Uber Bug Bounty Program is managed by <a href="https://hackerone.com/uber" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>Starbucks &#8211; The Starbucks Bug Bounty Program is managed by <a href="https://hackerone.com/starbucks" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>AT&amp;T &#8211; The AT&amp;T Bug Bounty Program is managed by <a href="https://hackerone.com/att" data-type="URL" data-id="https://hackerone.com/att" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>Linkedin &#8211; The Linkedin Bug Bounty Program is managed by <a href="https://hackerone.com/linkedin" target="_blank" rel="noreferrer noopener">HackerOne</a>
 </li>
-
-
-
 <li>Shopify &#8211; The Shopify Bug Bounty Program is managed by <a href="https://hackerone.com/shopify" target="_blank" rel="noreferrer noopener">HackerOne</a>
-</li>
-</ol>
-
-
-
-<p></p>
-
-
-
+</li></ol><p></p>
 <p>Another Great List of Programs, provided by disclose.io Casey John Ellis</p>
-
-
-
 <p><a href="https://github.com/disclose/bug-bounty-platforms">https://github.com/disclose/bug-bounty-platforms</a></p>
 		</div>
-				</div>
-					</div>
 		</div>
-							</div>
-		</section>
-						</div>
-				<div data-elementor-type="footer" data-elementor-id="1431" class="elementor elementor-1431 elementor-location-footer">
-								<section class="elementor-section elementor-top-section elementor-element elementor-element-941d6da elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="941d6da" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d35b2e8" data-id="d35b2e8" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-b997717 elementor-widget elementor-widget-heading" data-id="b997717" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">&copy; 2023  Bug Hunter, All Rights Reserved</p>		</div>
-				</div>
-					</div>
 		</div>
-							</div>
+		</div>
+		</div>
 		</section>
-						</div>
-		
+		</div>
+	<div data-elementor-type="footer" data-elementor-id="1431" class="elementor elementor-1431 elementor-location-footer">
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-941d6da elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="941d6da" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+	<div class="elementor-container elementor-column-gap-default">
+	<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d35b2e8" data-id="d35b2e8" data-element_type="column">
+	<div class="elementor-widget-wrap elementor-element-populated">
+	<div class="elementor-element elementor-element-b997717 elementor-widget elementor-widget-heading" data-id="b997717" data-element_type="widget" data-widget_type="heading.default">
+	<div class="elementor-widget-container">
+	<p class="elementor-heading-title elementor-size-default">&copy; 2023  Bug Hunter, All Rights Reserved</p>		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</section>
+		</div>
 <script src="/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0" id="hello-theme-frontend-js"></script>
 <script defer src="https://stats.wp.com/e-202345.js" id="jetpack-stats-js"></script>
 <script id="jetpack-stats-js-after">
